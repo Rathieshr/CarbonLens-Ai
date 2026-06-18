@@ -26,7 +26,7 @@ class IntelligenceScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 16.0),
                   child: _buildImpactBar(context, e.key, e.value, result.totalFootprint * (e.value / 100.0)),
                 );
-              }).toList(),
+              }),
 
               const SizedBox(height: 16),
               ValueListenableBuilder<Map<String, dynamic>?>(
@@ -55,7 +55,7 @@ class IntelligenceScreen extends StatelessWidget {
                 ...result.leaks.map((leak) => Padding(
                   padding: const EdgeInsets.only(bottom: 16.0),
                   child: _buildLeakCard(leak),
-                )).toList(),
+                )),
 
               const SizedBox(height: 16),
               ValueListenableBuilder<Map<String, dynamic>?>(
@@ -135,8 +135,11 @@ class IntelligenceScreen extends StatelessWidget {
 
   Widget _buildLeakCard(dynamic leak) { 
     Color severityColor = Colors.greenAccent;
-    if (leak.severity == 'High') severityColor = Colors.redAccent;
-    else if (leak.severity == 'Medium') severityColor = Colors.amber;
+    if (leak.severity == 'High') {
+      severityColor = Colors.redAccent;
+    } else if (leak.severity == 'Medium') {
+      severityColor = Colors.amber;
+    }
 
     return GlassCard(
       padding: const EdgeInsets.all(20),

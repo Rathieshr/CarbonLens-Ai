@@ -32,6 +32,10 @@ class GeminiService {
     AppState.initDefaults();
     final result = AppState.currentResult!;
 
+    if (AppState.aiInsights != null) {
+      return AppState.aiInsights;
+    }
+
     try {
       final url = Uri.parse('${AppConfig.backendUrl}/api/insights');
       final body = jsonEncode({
@@ -48,7 +52,9 @@ class GeminiService {
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        return data['insights'] as Map<String, dynamic>;
+        final insights = data['insights'] as Map<String, dynamic>;
+        AppState.aiInsights = insights;
+        return insights;
       } else {
         print("Backend Error in generateGlobalInsights: ${response.statusCode}");
         // Fallback insights

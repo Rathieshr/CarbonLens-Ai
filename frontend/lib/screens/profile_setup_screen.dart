@@ -55,8 +55,7 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
         flightsPerYear: flightsPerYear,
       );
       
-      AppState.currentUserProfile = profile;
-      AppState.currentResult = CarbonEngine.calculate(profile);
+      AppState.updateProfile(profile);
       
       // Navigate immediately, background fetch insights
       context.go('/home');
@@ -110,7 +109,7 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                       ),
                       const SizedBox(height: 16),
                       DropdownButtonFormField<String>(
-                        value: vehicleType,
+                        initialValue: vehicleType,
                         decoration: const InputDecoration(labelText: 'Vehicle Type'),
                         items: ['Petrol Car', 'Diesel Car', 'Motorcycle', 'EV', 'Public Transport', 'None']
                             .map((e) => DropdownMenuItem(value: e, child: Text(e)))
@@ -127,7 +126,7 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                       ),
                       const SizedBox(height: 16),
                       DropdownButtonFormField<String>(
-                        value: foodPreference,
+                        initialValue: foodPreference,
                         decoration: const InputDecoration(labelText: 'Food Preference'),
                         items: ['Vegetarian', 'Mixed', 'Non-Vegetarian']
                             .map((e) => DropdownMenuItem(value: e, child: Text(e)))

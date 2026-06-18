@@ -49,7 +49,7 @@ class ActionCenterScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-              )).toList(),
+              )),
 
               const SizedBox(height: 16),
               ValueListenableBuilder<Map<String, dynamic>?>(
@@ -90,7 +90,6 @@ class ActionCenterScreen extends StatelessWidget {
   }
 
   Widget _buildFallbackTimeline() {
-    AppState.initDefaults();
     final recs = AppState.currentResult!.recommendations.take(3).toList();
     double totalSavings = recs.fold(0, (sum, item) => sum + item.impact);
 

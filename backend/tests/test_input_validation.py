@@ -26,3 +26,14 @@ def test_chat_validation_missing_context():
     assert response.status_code == 422
     data = response.json()
     assert data["detail"][0]["loc"] == ["body", "context"]
+
+def test_chat_validation_extreme_prompt():
+    # Sending massive payload to test boundary limits
+    massive_string = "a" * 5000
+    response = client.post("/api/chat", json={"prompt": massive_string, "context": {}})
+    assert response.status_code == 422
+    data = response.json()
+    # Prompt is limited to 1000 characters by Pydantic Field
+    assert data["detail"][0]["loc"] == ["body", "prompt"]
+    assert "String should have at most 1000 characters" in data["detail"][0]["msg"]
+

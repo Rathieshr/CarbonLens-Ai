@@ -1,20 +1,25 @@
 # CarbonLens AI Architecture
 
-CarbonLens AI uses a modern, serverless-capable frontend coupled with a lightweight intelligence proxy.
+CarbonLens AI uses a decoupled, SOLID-compliant monorepo architecture designed for maximum resilience, performance, and maintainability.
 
-## Monorepo Structure
-- `/frontend`: A Flutter Web application handling all UI, routing, and local state.
-- `/backend`: A Python FastAPI server handling secure communications with the LLM.
+## 1. Component Flow & Separation of Concerns
 
-## Component Flow
-1. **Client Interface**: User enters profile details.
-2. **Local Processing Engine**: `CarbonEngine` (Dart) runs deterministic calculations to determine Footprint (in tonnes), Breakdown percentages, Carbon Grades, and Potential Credits.
-3. **Intelligence Proxy**: `GeminiService` (Dart) sends the aggregated, calculated data payload to the FastAPI Backend via HTTP POST.
-4. **Secure LLM Generation**: The Backend constructs a structured prompt, injects the `GEMINI_API_KEY` from the secure environment, and requests generation from `gemini-2.5-flash`.
-5. **State Hydration**: The Backend responds with a strictly structured JSON payload, which the Frontend uses to hydrate the UI via `ValueNotifier` reactive listeners.
+### Carbon Engine (`services/carbon_engine.dart`)
+The core domain logic. It is strictly responsible for parsing the `UserProfile` and generating base emissions data (Transport, Food, Travel, Energy). It acts as the orchestrator, delegating complex sub-systems to dedicated engines.
 
-## State Management
-We use a centralized `AppState` singleton wrapping Dart's native `ValueNotifier`. This allows deeply nested components (like `CarbonLensInsightCard`) to instantly react to asynchronous network completions without relying on heavy state-management libraries like Provider or Riverpod for this specific scoped data flow.
+### Forecast Engine (`services/forecast_engine.dart`)
+Extracts the "Time Machine" projection algorithms. Responsible for calculating the 5-year trajectory based on current habits vs. optimized recommendations.
 
-## Error Handling
-The application implements exponential backoff for network requests and graceful string fallbacks if the API rate-limits or fails, ensuring the user experience never crashes.
+### Wallet Engine (`services/wallet_engine.dart`)
+Handles the Gamification layer. Calculates the user's Green Credits, determines the Carbon Grade (A+ to C), sets dynamically unlocking Milestones, and maps carbon impact to real-world equivalents (e.g., Trees planted).
+
+### Gemini Intelligence Layer (`core/gemini_service.dart`)
+The asynchronous communication bridge. It strictly manages `http` interactions with the FastAPI backend, utilizing an Exponential Backoff Retry Strategy and local memory caching (memoization) to prevent redundant API calls.
+
+## 2. Serverless FastAPI Proxy (`/backend`)
+Handles secure communications with the LLM.
+- **Input Validation**: Uses `Pydantic` `Field` validations to enforce strict payload length and type rules.
+- **Security**: Injects the `GEMINI_API_KEY` from a secure environment variable. The frontend *never* holds the API key.
+
+## 3. Global State
+We use a lightweight, reactive singleton (`AppState`) wrapping Dart `ValueNotifier`. It implements an object hashing algorithm to enforce strict memoization, ensuring the CPU-heavy Engines only fire when the underlying profile data fundamentally changes.

@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import '../widgets/glass_card.dart';
 import '../widgets/insight_card.dart';
 import '../core/app_state.dart';
+import '../core/extensions.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -70,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                     const Text('Green Credits Balance', style: TextStyle(color: Colors.white70, fontSize: 16)),
                     const SizedBox(height: 8),
                     Text(
-                      '${wallet.currentCredits.toString().replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => '${m[1]},')} Credits',
+                      '${wallet.currentCredits.withCommas} Credits',
                       style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.greenAccent),
                     ),
                     const SizedBox(height: 16),
