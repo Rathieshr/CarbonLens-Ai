@@ -29,6 +29,6 @@ class PrimaryButton extends StatelessWidget {
           Text(text, style: const TextStyle(fontWeight: FontWeight.bold)),
         ],
       ),
-    );
+    ));
   }
 }

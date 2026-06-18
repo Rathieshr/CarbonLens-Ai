@@ -60,7 +60,7 @@ class AnimatedGauge extends StatelessWidget {
               ],
             ),
           ],
-        );
+        ));
       },
     );
   }
