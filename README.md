@@ -77,6 +77,11 @@ Built for **PromptWars Challenge 3**
 
 **Theme**: Helping individuals understand, track, and reduce their carbon footprint through simple actions and personalized insights.
 
+## Live Links
+
+* **Frontend Application**: [https://carbonlens-ai-production-2936.up.railway.app](https://carbonlens-ai-production-2936.up.railway.app)
+* **Backend API Proxy**: [https://carbonlens-ai-production.up.railway.app](https://carbonlens-ai-production.up.railway.app)
+
 ---
 
 ## Production Deployment (Railway)
