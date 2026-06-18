@@ -1,102 +1,291 @@
-# CarbonLens AI 🌍
+# 🌍 CarbonLens AI
 
-> Detect. Predict. Earn.
+## Personal Carbon Intelligence Platform
 
-## Overview
+**Detect. Predict. Earn.**
 
-**CarbonLens AI** is a premium Personal Carbon Intelligence Platform that goes beyond simple footprint calculations. It helps individuals understand, track, and monetize their carbon footprint through actionable intelligence and a gamified Green Credits system.
+CarbonLens AI helps individuals understand, forecast, and improve their environmental impact through Carbon Intelligence, Carbon Credits, and AI-powered decision support.
+
+Unlike traditional carbon calculators that only estimate emissions, CarbonLens AI acts as a personal sustainability advisor that helps users identify hidden carbon leaks, predict future impact, earn carbon credits, and make smarter lifestyle decisions.
+
+---
+
+## Challenge
+
+Many people want to live more sustainably but struggle to answer questions such as:
+
+* What activities contribute most to my carbon footprint?
+* Which lifestyle changes will create the biggest impact?
+* How will my environmental impact evolve over time?
+* Which actions are worth prioritizing?
+* How can I track meaningful progress?
+
+Most existing tools stop at reporting emissions.
+
+CarbonLens AI focuses on helping users understand, predict, and act.
+
+---
+
+## Solution
+
+CarbonLens AI is a Personal Carbon Intelligence Platform built around three principles:
+
+### 🔍 Detect
+
+Identify hidden carbon leaks and major emission sources.
+
+### 🔮 Predict
+
+Forecast future emissions, sustainability grades, and carbon credit growth.
+
+### 🏆 Earn
+
+Track Carbon Credits generated through sustainable behavior and recommended actions.
+
+---
 
 ## Key Features
-- **Carbon Detect**: Analyzes daily choices (transportation, diet, energy) to calculate your footprint.
-- **Carbon Predict**: Uses the *Time Machine* algorithm to forecast your long-term environmental impact vs. an optimized path.
-- **Carbon Earn**: Earn *Green Credits* by achieving footprint reductions and improving your *Carbon Grade*.
-- **Ask CarbonLens**: An always-available, embedded Gemini 2.5 AI advisor for personalized sustainability questions.
 
-## Engineering Standards
+### 🏠 Carbon Command Center
 
-During development, CarbonLens underwent a comprehensive engineering audit achieving high scores across multiple domains:
+Provides a complete overview of:
 
-* **Testing**: 100% test coverage on core business logic using `pytest` for the backend and `flutter test` for the frontend.
-* **Accessibility**: Fully semantic component tree with screen-reader accessible widgets, tooltips, and dynamic scaling.
-* **Security**: Backend Pydantic validation, secure environment variables, and strict CORS policies. Read more in [SECURITY.md](SECURITY.md).
-* **Architecture**: A fully decoupled serverless monorepo. Read more in [ARCHITECTURE.md](ARCHITECTURE.md).
-* **Resilience**: Exponential backoff and graceful AI fallback states guarantee the app never crashes.
+* Carbon Health Score
+* Carbon Grade
+* Carbon Credits
+* Annual Footprint
+* Potential Reduction Opportunities
+* AI Insights
 
-## Problem Statement
+### 🧠 Carbon Intelligence
 
-Current sustainability tools suffer from fatal flaws:
-* They are purely analytical and lack actionable guidance.
-* They induce climate anxiety without providing a clear roadmap.
-* They don't gamify or reward sustainable behavior.
-* They feel like spreadsheets rather than premium consumer products.
+Combines:
 
-## The Solution: Detect. Predict. Earn.
+* Carbon MRI Analysis
+* Emission Breakdown
+* Carbon Leak Radar
+* Root Cause Detection
 
-CarbonLens AI introduces a completely new paradigm for personal sustainability:
+Users can understand where emissions originate and which areas require attention.
 
-1. **Detect**: Identify hidden carbon leaks in your daily habits.
-2. **Predict**: Forecast your future carbon emissions and Carbon Grade.
-3. **Earn**: Accumulate Green Credits by executing AI-recommended optimizations.
+### 🔮 Carbon Future
 
-## Core Architecture & Features
+Forecasts:
 
-The platform is designed as a unified, 4-tab "Command Center" experience:
+* Future Emissions
+* Carbon Grade Progression
+* Carbon Credit Growth
+* Sustainability Milestones
 
-### 1. 🏠 Command Center
-Your executive dashboard. Get an instant read on your **Carbon Grade**, your massive animated **Green Credits Balance**, your Annual Footprint, and your single **Best Next Action** to earn more credits.
+Allows users to visualize long-term impact before making decisions.
 
-### 2. 🧠 Carbon Intelligence (Detect)
-A deep dive into your emission breakdown. The platform scans your profile for **Carbon Leaks** (e.g., inefficient commuting, high HVAC usage) and tells you exactly how many *Potential Credits* you are losing to these leaks.
+### ⚡ Action Center
 
-### 3. 🔮 Carbon Future (Predict)
-Visualize your environmental destiny. View your **6-Month Credit Forecast** chart comparing your current trajectory versus an optimized path. Track your milestone badges and see exactly how many credits you need to reach the next Carbon Grade (e.g., B+ ➔ A).
+Provides:
 
-### 4. ⚡ Impact Center (Earn)
-Your 30-Day Execution Roadmap. Instead of a boring checklist, the Impact Center ranks recommendations by impact and tells you explicitly how many **Credits Earned Per Action** you will receive for completing them.
+* Ranked Sustainability Actions
+* Impact Optimization
+* Personalized 30-Day Transformation Plan
+* Expected Reduction Outcomes
 
-### 💬 Global "Ask CarbonLens"
-A persistent intelligence layer available on every screen. Tap the floating action button to converse with your AI Carbon Strategist about any metric, leak, or recommendation on the screen.
+Helps users focus on the highest-value actions first.
+
+### 💬 Ask CarbonLens
+
+AI-powered sustainability advisor.
+
+Users can ask:
+
+* Should I buy an EV?
+* Is solar worth it for me?
+* How do I reach Grade A+?
+* What is my biggest carbon leak?
+* How can I earn more carbon credits?
+
+Responses are generated using the user's profile, forecast, credits, and sustainability insights.
+
+---
+
+## Screenshots
+
+*(Note: Replace these placeholder paths with actual screenshots of your application before submitting)*
+
+![Command Center Dashboard](./docs/screenshots/command_center.png)
+<br>
+
+![Carbon Intelligence Breakdown](./docs/screenshots/carbon_intelligence.png)
+<br>
+
+![Future Forecast Chart](./docs/screenshots/future_forecast.png)
+<br>
+
+![Action Center Roadmap](./docs/screenshots/action_center.png)
+<br>
+
+![Ask CarbonLens Chat](./docs/screenshots/ask_carbonlens.png)
+<br>
+
+---
+
+## How It Works
+
+### Step 1: User Profile
+
+Users provide:
+
+* Household information
+* Electricity usage
+* Commute distance
+* Vehicle type
+* Food preferences
+* Travel habits
+
+### Step 2: Carbon Engine
+
+The Carbon Engine calculates:
+
+* Carbon Footprint
+* Carbon Score
+* Carbon Grade
+* Carbon Credits
+* Emission Breakdown
+
+### Step 3: Carbon Intelligence
+
+The system identifies:
+
+* Major emission contributors
+* Carbon leaks
+* Improvement opportunities
+
+### Step 4: Future Forecast
+
+The Forecast Engine projects:
+
+* Future emissions
+* Future carbon grades
+* Potential carbon credit growth
+
+### Step 5: AI Decision Support
+
+Gemini-powered intelligence provides:
+
+* Personalized insights
+* Decision guidance
+* Sustainability coaching
+* Scenario analysis
+
+---
+
+## Architecture
+
+```mermaid
+graph TD
+    A[User Profile] --> B(Carbon Engine)
+    B --> C{Carbon Intelligence Layer}
+    C --> D(Forecast Engine)
+    D --> E[Carbon Wallet]
+    E --> F((Gemini Intelligence Layer))
+    F --> G[Ask CarbonLens]
+    
+    style A fill:#1e1e1e,stroke:#00e676,stroke-width:2px,color:#fff
+    style B fill:#1e1e1e,stroke:#00e676,stroke-width:2px,color:#fff
+    style C fill:#00e676,stroke:#1e1e1e,stroke-width:2px,color:#000
+    style D fill:#1e1e1e,stroke:#00e676,stroke-width:2px,color:#fff
+    style E fill:#1e1e1e,stroke:#00e676,stroke-width:2px,color:#fff
+    style F fill:#00e676,stroke:#1e1e1e,stroke-width:2px,color:#000
+    style G fill:#1e1e1e,stroke:#00e676,stroke-width:2px,color:#fff
+```
 
 ## Technology Stack
 
-CarbonLens AI is a completely serverless, edge-computed intelligence platform.
-
 ### Frontend
-* **Flutter Web**: High-performance, cross-platform UI.
-* **fl_chart**: Dynamic charting for predictive forecasting.
-* **go_router**: Advanced stateful shell routing for instant tab switching.
 
-### Intelligence Layer
-* **Google Gemini (gemini-2.5-flash)**: Using the official `google_generative_ai` Dart SDK.
-* We utilize Gemini for complex JSON batch-processing (generating 7 unique insights per profile) and context-aware conversational chat. No traditional backend is required!
+* Flutter Web
 
-## Running the Application
+### Backend
 
-To run the application locally, you must provide your Google Gemini API key:
+* FastAPI
 
-```bash
-flutter run -d chrome --dart-define=GEMINI_API_KEY=your_api_key_here
-```
+### AI
 
-## Why CarbonLens AI?
+* Google Gemini
 
-When you finish using CarbonLens AI, you won't say "I know my footprint." 
-You will say, "I know exactly how to reach Grade A+ and earn 500 Green Credits this month."
+### Deployment
 
-This transforms carbon awareness from a guilt-trip into an engaging, rewarding, and highly tactical decision-making process.
+* Railway
 
-## Challenge Submission
+---
 
-Built for **PromptWars Challenge 3**
+## Security
 
-**Theme**: Helping individuals understand, track, and reduce their carbon footprint through simple actions and personalized insights.
+* Gemini API key stored only on backend
+* Environment-based configuration
+* Input validation
+* Secure API communication
+* No hardcoded secrets
 
-## Live Links
+---
 
-* **Frontend Application**: [https://carbonlens-ai-production-2936.up.railway.app](https://carbonlens-ai-production-2936.up.railway.app)
-* **Backend API Proxy**: [https://carbonlens-ai-production.up.railway.app](https://carbonlens-ai-production.up.railway.app)
+## Testing
 
+Automated tests cover:
 
-## License
+* Carbon calculations
+* Grade calculations
+* Carbon credits
+* Forecast generation
+* Recommendation ranking
+* Error handling
+* Gemini fallback logic
 
-MIT License
+---
+
+## Accessibility
+
+CarbonLens AI includes:
+
+* Semantic labels
+* Screen reader support
+* Keyboard navigation
+* High contrast design
+* Responsive layouts
+
+---
+
+## Assumptions
+
+Carbon footprint estimates are intended for awareness and decision support purposes.
+
+Carbon Credits in CarbonLens are personal sustainability reward units representing estimated emissions avoided and are not tradable market carbon credits.
+
+---
+
+## Future Enhancements
+
+* Smart meter integrations
+* Real-time carbon tracking
+* Community challenges
+* Carbon credit marketplace integrations
+* Sustainability goal tracking
+
+---
+
+## Live Demo
+
+[https://carbonlens-ai-production-2936.up.railway.app](https://carbonlens-ai-production-2936.up.railway.app)
+
+---
+
+## Repository
+
+[https://github.com/Rathieshr/CarbonLens-Ai.git](https://github.com/Rathieshr/CarbonLens-Ai.git)
+
+---
+
+## Built For
+
+PromptWars Challenge 3
+
+**Theme:**
+Helping individuals understand, track, and reduce their carbon footprint through simple actions and personalized insights.
