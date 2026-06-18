@@ -1,292 +1,81 @@
 # CarbonLens AI 🌍
 
-> Detect. Predict. Reduce.
+> Detect. Predict. Earn.
 
 ## Overview
 
-CarbonLens AI is an AI-powered Carbon Observability Platform that helps individuals understand, track, and reduce their carbon footprint through actionable insights rather than generic carbon calculations.
+**CarbonLens AI** is a premium Personal Carbon Intelligence Platform that goes beyond simple footprint calculations. It helps individuals understand, track, and monetize their carbon footprint through actionable intelligence and a gamified Green Credits system.
 
-Unlike traditional carbon footprint calculators that only measure emissions, CarbonLens AI identifies hidden carbon leaks, predicts future environmental impact, and recommends the highest-impact actions users can take to reduce their footprint.
+Unlike traditional calculators that leave you feeling guilty and confused, CarbonLens AI identifies hidden carbon leaks, forecasts your future environmental trajectory, and rewards you with **Carbon Credits** for making high-impact lifestyle changes.
 
 ## Problem Statement
 
-Most people are aware that their daily activities contribute to carbon emissions, but they struggle to answer critical questions:
+Current sustainability tools suffer from fatal flaws:
+* They are purely analytical and lack actionable guidance.
+* They induce climate anxiety without providing a clear roadmap.
+* They don't gamify or reward sustainable behavior.
+* They feel like spreadsheets rather than premium consumer products.
 
-* Where are my largest carbon emissions coming from?
-* Which habits are causing the most environmental impact?
-* What will happen if I continue my current lifestyle?
-* Which changes will create the biggest reduction in emissions?
-* How can I make informed sustainability decisions?
+## The Solution: Detect. Predict. Earn.
 
-Current solutions often provide static carbon calculations without meaningful guidance or future planning.
+CarbonLens AI introduces a completely new paradigm for personal sustainability:
 
-## Solution
+1. **Detect**: Identify hidden carbon leaks in your daily habits.
+2. **Predict**: Forecast your future carbon emissions and Carbon Grade.
+3. **Earn**: Accumulate Green Credits by executing AI-recommended optimizations.
 
-CarbonLens AI introduces the concept of Carbon Observability.
+## Core Architecture & Features
 
-Instead of simply calculating emissions, CarbonLens AI:
+The platform is designed as a unified, 4-tab "Command Center" experience:
 
-* Detects hidden carbon leaks
-* Forecasts future carbon emissions
-* Simulates the impact of lifestyle changes
-* Prioritizes actions based on impact, cost, and difficulty
-* Generates personalized sustainability plans
+### 1. 🏠 Command Center
+Your executive dashboard. Get an instant read on your **Carbon Grade**, your massive animated **Green Credits Balance**, your Annual Footprint, and your single **Best Next Action** to earn more credits.
 
-## Key Features
+### 2. 🧠 Carbon Intelligence (Detect)
+A deep dive into your emission breakdown. The platform scans your profile for **Carbon Leaks** (e.g., inefficient commuting, high HVAC usage) and tells you exactly how many *Potential Credits* you are losing to these leaks.
 
-### 1. Carbon MRI
+### 3. 🔮 Carbon Future (Predict)
+Visualize your environmental destiny. View your **6-Month Credit Forecast** chart comparing your current trajectory versus an optimized path. Track your milestone badges and see exactly how many credits you need to reach the next Carbon Grade (e.g., B+ ➔ A).
 
-Generate a comprehensive carbon health assessment based on:
+### 4. ⚡ Impact Center (Earn)
+Your 30-Day Execution Roadmap. Instead of a boring checklist, the Impact Center ranks recommendations by impact and tells you explicitly how many **Credits Earned Per Action** you will receive for completing them.
 
-* Household information
-* Electricity consumption
-* Transportation habits
-* Food preferences
-* Travel patterns
-
-Output includes:
-
-* Carbon Health Score
-* Annual Carbon Footprint
-* Emission Breakdown by Category
-
----
-
-### 2. Carbon Leak Detection
-
-Identify hidden emission sources and inefficient lifestyle patterns.
-
-Examples:
-
-* Frequent solo commuting
-* Excessive cooling usage
-* High delivery dependency
-* Energy-intensive habits
-
-Each carbon leak is ranked by:
-
-* Severity
-* Annual Impact
-* Improvement Potential
-
----
-
-### 3. Carbon Time Machine
-
-Visualize future emissions based on current lifestyle trends.
-
-Users can compare:
-
-#### Current Path
-
-2026 → 4.1 tCO₂e
-
-2027 → 4.3 tCO₂e
-
-2028 → 4.5 tCO₂e
-
-2029 → 4.7 tCO₂e
-
-2030 → 5.0 tCO₂e
-
-#### Optimized Path
-
-2026 → 4.1 tCO₂e
-
-2027 → 3.7 tCO₂e
-
-2028 → 3.3 tCO₂e
-
-2029 → 3.0 tCO₂e
-
-2030 → 2.8 tCO₂e
-
----
-
-### 4. Impact Optimizer
-
-Rank carbon reduction opportunities by:
-
-* Environmental Impact
-* Financial Cost
-* Difficulty Level
-* Expected Savings
-
-Examples:
-
-| Action             | Carbon Impact | Cost      | Difficulty |
-| ------------------ | ------------- | --------- | ---------- |
-| Work From Home     | High          | Low       | Easy       |
-| Public Transport   | Medium        | Low       | Easy       |
-| Solar Installation | Very High     | High      | Medium     |
-| Electric Vehicle   | High          | Very High | Medium     |
-
----
-
-### 5. Carbon Budget
-
-Translate carbon emissions into an understandable budget system.
-
-Users can track:
-
-* Annual Carbon Allowance
-* Carbon Consumed
-* Remaining Carbon Budget
-
-This helps users make informed sustainability decisions before taking actions.
-
----
-
-### 6. AI-Powered Recommendations
-
-Using Google Gemini, CarbonLens AI generates:
-
-* Personalized carbon reduction plans
-* Sustainability recommendations
-* Carbon leak explanations
-* Future scenario analysis
-* Impact summaries
-
-## Architecture
-
-```text
-Flutter Web Frontend
-          |
-          v
-      FastAPI Backend
-          |
-          v
-      Gemini AI
-```
+### 💬 Global "Ask CarbonLens"
+A persistent intelligence layer available on every screen. Tap the floating action button to converse with your AI Carbon Strategist about any metric, leak, or recommendation on the screen.
 
 ## Technology Stack
 
+CarbonLens AI is a completely serverless, edge-computed intelligence platform.
+
 ### Frontend
+* **Flutter Web**: High-performance, cross-platform UI.
+* **fl_chart**: Dynamic charting for predictive forecasting.
+* **go_router**: Advanced stateful shell routing for instant tab switching.
 
-* Flutter Web
-* Material Design
-* fl_chart
+### Intelligence Layer
+* **Google Gemini (gemini-2.5-flash)**: Using the official `google_generative_ai` Dart SDK.
+* We utilize Gemini for complex JSON batch-processing (generating 7 unique insights per profile) and context-aware conversational chat. No traditional backend is required!
 
-### Backend
+## Running the Application
 
-* FastAPI
-* Python
+To run the application locally, you must provide your Google Gemini API key:
 
-### AI
-
-* Google Gemini
-
-### Deployment
-
-* Frontend: GitHub Pages / Firebase Hosting
-* Backend: Railway / Render
-
-## User Flow
-
-```text
-Profile Setup
-      |
-      v
-Carbon MRI
-      |
-      v
-Carbon Leak Detection
-      |
-      v
-Carbon Time Machine
-      |
-      v
-Impact Optimizer
-      |
-      v
-AI Action Plan
+```bash
+flutter run -d chrome --dart-define=GEMINI_API_KEY=your_api_key_here
 ```
 
 ## Why CarbonLens AI?
 
-Most carbon footprint applications stop at measurement.
+When you finish using CarbonLens AI, you won't say "I know my footprint." 
+You will say, "I know exactly how to reach Grade A+ and earn 500 Green Credits this month."
 
-CarbonLens AI focuses on:
-
-### Detect
-
-Identify hidden carbon leaks.
-
-### Predict
-
-Forecast future environmental impact.
-
-### Reduce
-
-Recommend the highest-impact actions.
-
-This transforms carbon awareness into practical decision-making.
-
-## Future Enhancements
-
-### Smart Meter Integration
-
-Real-time energy monitoring through smart meters.
-
-### IoT Device Integration
-
-* Smart plugs
-* Home energy systems
-* EV chargers
-
-### Community Carbon Benchmarking
-
-Compare carbon performance across communities and neighborhoods.
-
-### Automated Carbon Tracking
-
-Passive data collection and continuous carbon monitoring.
-
-## AI Usage
-
-Google Gemini is used for:
-
-* Carbon leak analysis
-* Personalized recommendations
-* Emission forecasting explanations
-* Scenario evaluation
-* Sustainability action plans
-
-## Screenshots
-
-Add screenshots here.
-
-### Carbon MRI
-
-[Insert Screenshot]
-
-### Carbon Leak Detection
-
-[Insert Screenshot]
-
-### Carbon Time Machine
-
-[Insert Screenshot]
-
-### Impact Optimizer
-
-[Insert Screenshot]
-
-## Live Demo
-
-[Deployment URL]
-
-## Repository
-
-[GitHub Repository URL]
+This transforms carbon awareness from a guilt-trip into an engaging, rewarding, and highly tactical decision-making process.
 
 ## Challenge Submission
 
-Built for PromptWars Challenge 3
+Built for **PromptWars Challenge 3**
 
-Theme:
-
-Helping individuals understand, track, and reduce their carbon footprint through simple actions and personalized insights.
+**Theme**: Helping individuals understand, track, and reduce their carbon footprint through simple actions and personalized insights.
 
 ## License
 
