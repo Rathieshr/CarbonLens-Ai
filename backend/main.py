@@ -19,7 +19,8 @@ app.add_middleware(
         "http://localhost:3000",
         "http://127.0.0.1:8000",
         "http://127.0.0.1:8080",
-        "https://carbonlens-frontend.up.railway.app", # Adjust if domain changes
+        "https://carbonlens-ai-production-2936.up.railway.app",
+        "https://carbonlens-ai-production-2936.up.railway.app:8080",
     ],
     allow_credentials=True,
     allow_methods=["*"],
