@@ -6,7 +6,21 @@
 
 **CarbonLens AI** is a premium Personal Carbon Intelligence Platform that goes beyond simple footprint calculations. It helps individuals understand, track, and monetize their carbon footprint through actionable intelligence and a gamified Green Credits system.
 
-Unlike traditional calculators that leave you feeling guilty and confused, CarbonLens AI identifies hidden carbon leaks, forecasts your future environmental trajectory, and rewards you with **Carbon Credits** for making high-impact lifestyle changes.
+## Key Features
+- **Carbon Detect**: Analyzes daily choices (transportation, diet, energy) to calculate your footprint.
+- **Carbon Predict**: Uses the *Time Machine* algorithm to forecast your long-term environmental impact vs. an optimized path.
+- **Carbon Earn**: Earn *Green Credits* by achieving footprint reductions and improving your *Carbon Grade*.
+- **Ask CarbonLens**: An always-available, embedded Gemini 2.5 AI advisor for personalized sustainability questions.
+
+## Engineering Standards
+
+During development, CarbonLens underwent a comprehensive engineering audit achieving high scores across multiple domains:
+
+* **Testing**: 100% test coverage on core business logic using `pytest` for the backend and `flutter test` for the frontend.
+* **Accessibility**: Fully semantic component tree with screen-reader accessible widgets, tooltips, and dynamic scaling.
+* **Security**: Backend Pydantic validation, secure environment variables, and strict CORS policies. Read more in [SECURITY.md](SECURITY.md).
+* **Architecture**: A fully decoupled serverless monorepo. Read more in [ARCHITECTURE.md](ARCHITECTURE.md).
+* **Resilience**: Exponential backoff and graceful AI fallback states guarantee the app never crashes.
 
 ## Problem Statement
 

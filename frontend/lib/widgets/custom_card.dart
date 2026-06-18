@@ -16,11 +16,14 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: onTap,
-        child: Padding(
-          padding: padding,
-          child: child,
+      child: Semantics(
+        container: true,
+        child: InkWell(
+          onTap: onTap,
+          child: Padding(
+            padding: padding,
+            child: child,
+          ),
         ),
       ),
     );

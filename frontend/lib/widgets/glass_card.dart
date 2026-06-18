@@ -21,8 +21,10 @@ class GlassCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget content = Container(
-      width: width,
+    Widget content = Semantics(
+      container: true,
+      child: Container(
+        width: width,
       height: height,
       margin: margin,
       decoration: BoxDecoration(

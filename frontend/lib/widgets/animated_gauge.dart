@@ -17,8 +17,10 @@ class AnimatedGauge extends StatelessWidget {
       duration: const Duration(seconds: 2),
       curve: Curves.easeOutCubic,
       builder: (context, double value, child) {
-        return Stack(
-          alignment: Alignment.center,
+        return Semantics(
+          value: "Carbon score $score out of 100, Grade $grade",
+          child: Stack(
+            alignment: Alignment.center,
           children: [
             SizedBox(
               width: 200,

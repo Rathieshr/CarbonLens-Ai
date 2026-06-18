@@ -2,7 +2,7 @@ import os
 import json
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 import google.generativeai as genai
 from dotenv import load_dotenv
 
@@ -35,11 +35,11 @@ if GEMINI_API_KEY:
 model = genai.GenerativeModel('gemini-2.5-flash')
 
 class ProfileRequest(BaseModel):
-    profile_data: dict
+    profile_data: dict = Field(..., description="User carbon profile data")
 
 class ChatRequest(BaseModel):
-    prompt: str
-    context: dict
+    prompt: str = Field(..., min_length=1, max_length=1000, description="The user's question, limited to 1000 characters")
+    context: dict = Field(..., description="The user's profile context")
 
 @app.get("/health")
 def health_check():

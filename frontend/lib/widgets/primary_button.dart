@@ -14,8 +14,11 @@ class PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
+    return Semantics(
+      button: true,
+      label: text,
+      child: ElevatedButton(
+        onPressed: onPressed,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
